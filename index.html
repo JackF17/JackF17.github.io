@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title> CinemaScope homepage </title>
+<link rel="stylesheet" href="style.css">
+ <style>
+body {
+  background-image: url('background.jpg');
+   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style> 
+
+</head>
+<body>
+
+
+
+
+<h1 style="color:white;"> CinemaScope </h1>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="starsl.webp" width="1000" height="400" >
+  <div class="text">Star Wars</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="lordsl.jpg" width="1000" height="400">
+  <div class="text">The Lord Of The Rings</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="avensl.jpg" width="1000" height="400">
+  <div class="text">The Avengers</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<p style="color:white;"> Welcome to CinemaScope! 
+We exist to provide a comfrotable viewing experience for all of the latest and greatest movies, if you want to see an upcoming movie in cinemas then we can provide you a comfortable and affordable viewing experience.Currently we have five cinemas located across the country and we pride ourselves on our ability to provide a comfortable viewing experience at a more affor price when compared to other cinemas. 
+This website will provide all the neccesary information on the movie we will be shwoing and the locations of all five of our cinemas so that you can easily find all the information you need to set yourself on your way to a fantastic viewing experience! </p> 
+
+<h2 style="color:white;">!Our Movies!</h2>
+<p style="color:white;"> We have a large variety of movies for you to view. Below we have the various genres of movies we have avaliable</p>
+
+<h3 style="background-color:white;"> <a href="scifi.html" >!Sci-fi Movies! </h3>
+<p style="color:white;"> If your looking for a film experience to take you out of this world then sci-fi movies will be the perfect choice for you, we have scfi movies for kids, adults, the whole family! </p>
+
+<h3 style="background-color:white;"> <a href="fantasy.html" >!Fantasy Movies! </h3>
+<p style="color:white;">Our collection of fantasy movies are sure to take you to a world of magic and wonder, whehter its the magical world of Harry Potter or the whimsical hilarity of the world of Shrek we've got you covered   </p>
+
+<h3 style="background-color:white;"> <a href="superhero.html" >!Superhero Movies! </h3>
+<p style="color:white;"> if your looking for spectactular spectacle then the superhero movie category is the one for you, from Marvel to D.C. we have it all! </p>
+
+
+<h3 style="background-color:white;"> <a href="contact.html" >!Contact Us! </h3>
+<p style="color:white;">  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
